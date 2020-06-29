@@ -15,7 +15,8 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/edu/user")
+@CrossOrigin
 public class UserController {
 
     @Autowired

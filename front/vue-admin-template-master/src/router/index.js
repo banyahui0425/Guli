@@ -60,6 +60,28 @@ export const constantRouterMap = [
   },
 
   {
+    path: '/user',
+    component: Layout,
+    redirect: '/user/table',
+    name: 'user lieboap',
+    meta: { title: 'user lieboap', icon: 'table' },
+    children: [
+      {
+        path: 'table',
+        name: 'lieboap',
+        component: () => import('@/views/user/index'),
+        meta: { title: 'lieboap', icon: 'table' }
+      },
+      {
+        path: 'tree',
+        name: 'add',
+        component: () => import('@/views/user/add'),
+        meta: { title: 'add', icon: 'tree' }
+      }
+    ]
+  },
+
+  {
     path: '/form',
     component: Layout,
     children: [
